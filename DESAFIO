@@ -1,0 +1,53 @@
+
+//Crea una función que calcule el índice de masa corporal (IMC) de una persona a partir de su altura en metros y peso en kilogramos, que se recibirán como parámetros.
+let altura = parseFloat(prompt("Ingresa tu altura en metros:"));
+let peso = parseFloat(prompt("Ingresa tu peso en kilogramos:"));
+
+function calcularIMC(altura, peso){
+    let imc = peso/(altura*altura);
+    return imc;
+}
+prompt(`Tu IMC es: ${calcularIMC(altura, peso)}`);
+//Crea una función que calcule el valor del factorial de un número pasado como parámetro.
+function calcularFactorial(numero){
+    if(numero===0 || numero===1){
+        return 1;
+    }else{
+        return numero*calcularFactorial(numero-1);
+    }
+}
+let numero = parseFloat(prompt(`Ingrese un numero:`))
+let resultado= calcularFactorial (numero)
+console.log(`El factorial de ${numero} es ${resultado}`)
+//Crea una función que convierta un valor en dólares, pasado como parámetro, y devuelva el valor equivalente en reales(moneda brasileña,si deseas puedes hacerlo con el valor del dólar en tu país). Para esto, considera la cotización del dólar igual a R$4,80.
+let dolares = parseFloat(prompt("Ingrese el valor en dólares:"));
+const cotizacionReal = 4.80;
+
+function dolarAReal(dolares) {
+    return dolares * cotizacionReal;
+}
+
+alert(`El valor en reales es: R$${dolarAReal(dolares).toFixed(2)}`);
+//Crea una función que muestre en pantalla el área y el perímetro de una sala rectangular, 
+// utilizando la altura y la anchura que se proporcionarán como parámetros.
+
+function calcularArea(altura, anchura){
+    return altura * anchura;
+}
+function calcularPerimetro(altura, anchura){
+    return (altura + anchura)*2;
+}
+alert(`El área de la sala rectangular es: ${calcularArea(5, 10)} y su perímetro es: ${calcularPerimetro(5, 10)}`);
+
+//Crea una función que muestre en pantalla el área y el perímetro de una sala circular, 
+// utilizando su radio que se proporcionará como parámetro. Considera Pi = 3,14.
+const PI = 3.14;
+function calcularAreaCirculo(radio) {
+    return PI * radio * radio;
+}
+alert(`El área de la sala circular es: ${calcularAreaCirculo(5)} `);
+//Crea una función que muestre en pantalla la tabla de multiplicar de un número dado como parámetro.
+
+function tablaMultiplicar(numero){
+    return numero*1; numero*2; numero*3; numero*4; numero*5; numero*6; numero*7; numero*8; numero*9; numero*10
+}
